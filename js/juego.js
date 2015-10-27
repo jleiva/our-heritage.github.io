@@ -17,6 +17,15 @@ var close_nav_lang = $('.close-lang');
 var list_lang_item = $(".list-lang-item");
 var list_lang = $("#list-lang");
 
+//Video Elements ***********************************************************************
+var video = $('#main-video');
+var btn = $('#btn-play-js');
+var close = $('#close');
+var player = $('#ytplayer');
+var content = '<iframe class="video-frame" type="text/html" width="420"'+
+' height="315" src="http://www.youtube.com/'+
+'embed/fML-0M3e6Tk?autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"  frameborder="0"/>';
+
 
 //smaller viewports ***********************************************************************
 enquire.register('(max-width: 766px)', {
@@ -72,7 +81,7 @@ function largerViewports() {
 
   // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
 
-  $('.game-nav a').click(function(){  
+  $('.game-nav a').click(function(){
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -121,7 +130,7 @@ function largerViewports() {
     //GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;
-        
+
         for (var i = 0; i < galleryData.length; i++) {
             if (number == galleryData[i].number) {
               $('#full-picture').attr("src", galleryData[i].img);
@@ -191,3 +200,18 @@ function smallerViewports() {
     };
   });
 }
+// Video ///////////////////////////////////////////////////////////////////////////////////
+
+//expected display block
+  btn.click(function(){
+    video.addClass('header-lightbox-video');
+    btn.addClass('non-visible');
+    player.html(content);
+  });
+
+ //expected display none
+  close.click(function(){
+    video.removeClass('header-lightbox-video');
+    btn.removeClass('non-visible');
+    player.html('');
+  });
