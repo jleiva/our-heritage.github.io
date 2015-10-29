@@ -13,12 +13,12 @@ var current_char ="";
 //HTML Elements ***********************************************************************
 var target = $(".gallery-imgs");
 var galleryBtn = target.children("li");
-var tap_character = $('.taps-character h3');
+var tap_character = $('.taps-character .tap-banner h3');
 var close_tap = $('.close-tap');
 var close_nav_lang = $('.close-lang');
 var list_lang_item = $(".list-lang-item");
 var list_lang = $("#list-lang");
-var item=$(".slider-content");
+var item = $(".slider-content");
 var content_swipe = $("#gallery-container");
 var counter =  $("#counter");
 var char_btn = $('.char_btn');
@@ -81,7 +81,7 @@ function largerViewports() {
 
   // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
 
-  $('.game-nav a').click(function(){
+  $('.game-nav a').click(function(){  
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
@@ -123,9 +123,9 @@ function largerViewports() {
 
     function detailsGenerator(position){
         var curr_id = char_containers[position].id;
-        var char_img = "<img src="+char_imgs_container[position].img+">";
-        var char_text = $('#'+curr_id).html();
-        details.html( char_img +'<h3>'+ curr_id +'</h3>'+ char_text );
+        var char_intro = $(".tap-banner-"+curr_id).html();
+        var char_brief = $('#'+curr_id).html();
+        details.html(char_intro + char_brief );
         displayer('show');
     }
 
@@ -140,7 +140,7 @@ function largerViewports() {
     //GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;
-
+        
         for (var i = 0; i < galleryData.length; i++) {
             if (number == galleryData[i].number) {
               $('#full-picture').attr("src", galleryData[i].img);
@@ -179,11 +179,11 @@ function smallerViewports() {
 // Close Tag ///////////////////////////////////////////////////////////////////////////////////
 
   tap_character.on("click", function() {
-    if ($(this).next().hasClass( "expand-tap-info" )) {
-      $(this).next().removeClass('expand-tap-info');
+    if ($(this).parent(".tap-banner").next().hasClass( "expand-tap-info" )) {
+      $(this).parent(".tap-banner").next().removeClass('expand-tap-info');
     }else {
       $(".tap-info").removeClass('expand-tap-info');
-      $(this).next().addClass('expand-tap-info');
+      $(this).parent(".tap-banner").next().addClass('expand-tap-info');
     }
   });
 
@@ -227,7 +227,7 @@ title = "1/"+item.length;
         num=num-1;
         cont=cont-1;
     }
-    $(".title").text(title);
+    $(".title").text(title); 
   });
   content_swipe.on("swipeleft",function(){
     if(cont==size_item){
@@ -242,7 +242,7 @@ title = "1/"+item.length;
         num=num+1;
         cont=cont+1;
     }
-    $(".title").text(title);
+    $(".title").text(title); 
   });
   counter.append('<p class="title">'+title+'</p>');
 
