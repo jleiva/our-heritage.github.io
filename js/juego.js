@@ -22,9 +22,11 @@ var video = $('#main-video');
 var btn = $('#btn-play-js');
 var close = $('#close');
 var player = $('#ytplayer');
-var content = '<iframe class="video-frame" type="text/html" width="420"'+
-' height="315" src="http://www.youtube.com/'+
-'embed/fML-0M3e6Tk?autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"  frameborder="0"/>';
+var content = '<iframe class="main-video-player" width="640" height="480" src="https://www.youtube.com/embed/E7CaTJ2SvG8'+
+'?autoplay=1&amp;rel=0&amp;'+
+'controls=1&amp;showinfo=1"  frameborder="0"/>';
+
+
 
 
 //smaller viewports ***********************************************************************
