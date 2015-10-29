@@ -3,17 +3,17 @@
 .taps-character {
 	margin: 0 auto;
 	max-width: 100%;
-	& li {
-		background-color: #8E8A8A;
-		border-bottom: 1px solid #ccc;
-	}
-	h3 {
-		cursor: pointer;
-		font-family: $text-serif;
-		margin-right: 4%;
-		padding-bottom: 100px;
-		text-align: right;
-	}
+  & li {
+    border-bottom: 1px solid #ccc;
+    background-color: #8E8A8A;
+  }
+  h3 {
+    cursor: pointer;
+    font-family: "Finger Paint", serif;
+    text-align: right;
+    padding-bottom: 100px;
+    margin-right: 4%
+  }
 	@media (min-width: 768px) {
 		display: none;
 	}
@@ -21,28 +21,28 @@
 
 .tap-amy {
 	background: url(../img/characters/head-amy.png) no-repeat;
-	background-position: 20px 53px;
+  background-position: 20px 53px;
 }
 
 .tap-grandpa {
-	background: url(../img/characters/head-grandpa.png) no-repeat;
-	background-position: 20px 53px;
+	background: url(../img/characters/head-grandps.png) no-repeat;
+  	background-position: 20px 53px;
 }
 
 .tap-mom {
 	background: url(../img/characters/head-mom.png) no-repeat;
-	background-position: 20px 53px;
+  background-position: 20px 53px;
 }
 
 .tap-dad {
 	background: url(../img/characters/head-dad.png) no-repeat;
-	background-position: 20px 25px;
+  background-position: 20px 25px;
 }
 
-.close-tap {
-	float: right;
-	margin: 5% 0;
-	stroke: #000;
+.close-tap{
+  stroke: #000;
+  margin: 5% 0;
+  float: right;
 }
 
 
@@ -56,15 +56,15 @@
 	padding: 0 15px;
 	transition: max-height .9s ease-in-out;
 	width: 100%;
-	& p{
-		margin: 16px 0;
-		width: 90%;
-	}
+  & p{
+    margin: 16px 0;
+    width: 90%;
+  }
 }
 
 .expand-tap-info {
-	height: 100%;
-	max-height: 480px;
+  height: 100%;
+  max-height: 480px;
 }
 
 // Characters Desktop
@@ -78,11 +78,15 @@
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 .details .close-tap {
 	display: none;
+}
+
+.details img {
+	width: 20%;
 }
 
 .main-char-selection {
@@ -94,8 +98,8 @@
 
 .char-details {
 	background-color: #D7AE83;
-	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-	margin-top: -540px;
+  	box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+	margin-top: -695px;
 	overflow: hidden;
 	position: absolute;
 	width: 900px;
@@ -108,34 +112,11 @@
 }
 
 .char-details .char-selection {
-	margin-top: 365px;
-	position: absolute;
-	right: 0;
 	text-align: center;
-	top: 0;
-	width: 60%;
-}
-
-.details {
-	height: 540px;
-	overflow: hidden;
-	padding: 6% 6% 0 6%;
-	width: 100%;
-	img {
-		float: left;
-		margin: 0 4%;
-	}
-	h3 {
-		margin-bottom: 15px;
-	}
-	h3, p {
-		float: right;
-		width: 60%;
-	}
 }
 
 .preview-char {
-	margin-right: 8%;
+	margin: 0 5%;
 }
 
 .main-char-selection .char_btn {
@@ -153,10 +134,21 @@
 	width: 40px;
 }
 
+.details img {
+	float: left;
+	margin: 0 8%;
+}
+
 .controls {
 	overflow: hidden;
 	position: absolute;
 	width: 100%;
+}
+
+.details {
+	height: 518px;
+	overflow: hidden;
+	padding: 5% 8% 0 8%;
 }
 
 .back {
@@ -166,11 +158,11 @@
 }
 
 .close-details {
-	cursor: pointer;
+  cursor:pointer;
+  stroke: #fff;
 	position: absolute;
 	right: 2%;
 	top: 2%;
-	stroke: #fff;
 	width: 40px;
 }
 
@@ -181,8 +173,8 @@
 }
 
 .section-character {
-	display: none;
-	@media (min-width: 768px) {
-		display: inherit;
-	}
+  display: none;
+  @media (min-width: 768px) {
+    display: inherit;
+  }
 }
