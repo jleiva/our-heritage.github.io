@@ -1206,7 +1206,6 @@ header p {
   opacity: 0; }
 
 .header-lightbox-video {
-  text-align: center;
   -webkit-transition: .6s;
   -o-transition: .6s;
   transition: .6s;
@@ -1214,7 +1213,6 @@ header p {
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   padding-bottom: 700px;
-  overflow: hidden;
   margin: 0 auto;
   top: 0;
   opacity: 1;
@@ -1264,8 +1262,7 @@ header p {
   display: none; }
 
 .ytplayer {
-  text-align: center;
-  position: absolute;
-  margin: 0 auto; }
+  margin-left: 28%;
+  position: absolute; }
 
 /*# sourceMappingURL=style.css.map */

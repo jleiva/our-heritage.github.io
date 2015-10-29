@@ -9,7 +9,6 @@
 }
 
 .header-lightbox-video{
-  text-align: center;
   -webkit-transition: .6s;
   -o-transition: .6s;
   transition: .6s;
@@ -17,7 +16,6 @@
   background-color: rgba(0, 0, 0, .9);
   position:absolute;
   padding-bottom:700px;
-  overflow:hidden;
   margin: 0 auto;
   top: 0;
   opacity: 1;
@@ -71,7 +69,6 @@
 }
 
 .ytplayer {
-    text-align: center;
+    margin-left: 28%;
     position: absolute;
-    margin: 0 auto;
 }
