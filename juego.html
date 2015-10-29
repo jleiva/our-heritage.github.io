@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Our Heritage</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Our Heritage</title>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body class="background-juego">
   <header class="header-juego">
@@ -48,7 +53,15 @@
     <ul class="taps-character">
       <h2>Personajes</h2>
       <li>
-        <h3 class="tap-amy">Amy</h3>
+        <div class="tap-banner tap-banner-amy">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/characters/body-amy.png">
+            <source media="(max-width: 768px)" srcset="img/characters/head-amy.png"> 
+            <source srcset="img/characters/body-amy.png">
+            <img srcset="img/characters/body-amy.png" alt="This picture is currently having some problems.">
+          </picture>
+          <h3 class="tap-amy">Amy</h3>
+        </div>      
         <div class="tap-info" id="amy">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
@@ -59,8 +72,16 @@
         </div>
       </li>
       <li>
-        <h3 class="tap-grandpa">Gramps</h3>
-        <div class="tap-info" id="gramps">
+        <div class="tap-banner tap-banner-grandps">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/characters/body-grandps.png">
+            <source media="(max-width: 768px)" srcset="img/characters/head-grandps.png"> 
+            <source srcset="img/characters/body-grandps">
+            <img srcset="img/characters/body-grandps" alt="This picture is currently having some problems.">
+          </picture>
+          <h3 class="tap-grandps">Grandps</h3>
+        </div>
+        <div class="tap-info" id="grandps">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
             <line stroke-width="2" x1="39.769" y1="0.833" x2="0.706" y2="39.771"/>
@@ -71,7 +92,15 @@
         </div>
       </li>
       <li>
-        <h3 class="tap-mom">Mom</h3>
+        <div class="tap-banner tap-banner-mom">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/characters/body-mom.png">
+            <source media="(max-width: 768px)" srcset="img/characters/head-mom.png"> 
+            <source srcset="img/characters/body-mom.png">
+            <img srcset="img/characters/body-mom.png" alt="This picture is currently having some problems.">
+          </picture>
+          <h3 class="tap-mom">Mom</h3>
+        </div>
         <div class="tap-info" id="mom">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
@@ -82,7 +111,15 @@
         </div>
       </li>
       <li>
-        <h3 class="tap-dad">Dad</h3>
+        <div class="tap-banner tap-banner-dad">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/characters/body-dad.png">
+            <source media="(max-width: 768px)" srcset="img/characters/head-dad.png"> 
+            <source srcset="img/characters/body-dad.png">
+            <img srcset="img/characters/body-dad.png" alt="This picture is currently having some problems.">
+          </picture>
+          <h3 class="tap-dad">Dad</h3>
+        </div>
         <div class="tap-info" id="dad">
           <svg class="close-tap" height="25px" width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
             <line stroke-width="2" x1="0.769" y1="0.706" x2="39.706" y2="39.769"/>
@@ -98,9 +135,9 @@
     <div class="characters-wrapper">
         <div class="main-char-selection char-selection">
           <button class="char_btn" value="amy"></button>
+          <button class="char_btn" value="grandps"></button>
           <button class="char_btn" value="mom"></button>
           <button class="char_btn" value="dad"></button>
-          <button class="char_btn" value="gramps"></button>
         </div>
       <div class="char-details hidden" id="char_details">
           <svg id="hide" class="close-details" height="40px" width="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
@@ -116,18 +153,18 @@
         <div class="char-selection">
           <button class="char_btn preview-char" value="amy">
             <img src="img/characters/head-amy.png" >
-            <h4>Amy</h4>
+            <h2>Amy</h2>   
+          <button class="char_btn preview-char" value="grandps">
+            <img src="img/characters/head-grandps.png" >
+            <h2>Grandps</h2>
+          </button>
           <button class="char_btn preview-char" value="mom">
             <img src="img/characters/head-mom.png" >
-            <h4>Mom</h4>
+            <h2>Mom</h2>
           </button>
           <button class="char_btn preview-char" value="dad">
             <img src="img/characters/head-dad.png" >
-            <h4>Dad</h4>
-          </button>
-          <button class="char_btn preview-char" value="gramps">
-            <img src="img/characters/head-grandpa.png" >
-            <h4>Gramps</h4>
+            <h2>Dad</h2>
           </button>
         </div>
       </div>
