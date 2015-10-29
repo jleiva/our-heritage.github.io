@@ -862,6 +862,7 @@ header p {
   padding: 0 5%; }
   @media (min-width: 768px) {
     .about {
+      padding: 0;
       width: 480px; }
       .about .right {
         float: right; }
@@ -948,38 +949,22 @@ header p {
   margin: 0 auto;
   max-width: 100%; }
   .taps-character li {
-    background-color: #8E8A8A;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid #ccc;
+    background-color: #8E8A8A; }
   .taps-character h3 {
     cursor: pointer;
     font-family: "Finger Paint", serif;
-    margin-right: 4%;
+    text-align: right;
     padding-bottom: 100px;
-    text-align: right; }
+    margin-right: 4%; }
   @media (min-width: 768px) {
     .taps-character {
       display: none; } }
 
-.tap-amy {
-  background: url(../img/characters/head-amy.png) no-repeat;
-  background-position: 20px 53px; }
-
-.tap-grandpa {
-  background: url(../img/characters/head-grandpa.png) no-repeat;
-  background-position: 20px 53px; }
-
-.tap-mom {
-  background: url(../img/characters/head-mom.png) no-repeat;
-  background-position: 20px 53px; }
-
-.tap-dad {
-  background: url(../img/characters/head-dad.png) no-repeat;
-  background-position: 20px 25px; }
-
 .close-tap {
-  float: right;
+  stroke: #000;
   margin: 5% 0;
-  stroke: #000; }
+  float: right; }
 
 .tap-info {
   background: #fff;
@@ -1012,6 +997,9 @@ header p {
 .details .close-tap {
   display: none; }
 
+.details img {
+  width: 20%; }
+
 .main-char-selection {
   background-image: url("../img/characters/family-photo.png");
   height: 540px;
@@ -1021,7 +1009,7 @@ header p {
 .char-details {
   background-color: #D7AE83;
   box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.4);
-  margin-top: -540px;
+  margin-top: -695px;
   overflow: hidden;
   position: absolute;
   width: 900px;
@@ -1032,29 +1020,10 @@ header p {
   padding: 2% 0; }
 
 .char-details .char-selection {
-  margin-top: 365px;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 60%; }
-
-.details {
-  height: 540px;
-  overflow: hidden;
-  padding: 6% 6% 0 6%;
-  width: 100%; }
-  .details img {
-    float: left;
-    margin: 0 4%; }
-  .details h3 {
-    margin-bottom: 15px; }
-  .details h3, .details p {
-    float: right;
-    width: 60%; }
+  text-align: center; }
 
 .preview-char {
-  margin-right: 8%; }
+  margin: 0 5%; }
 
 .main-char-selection .char_btn {
   background-color: inherit;
@@ -1069,10 +1038,19 @@ header p {
   height: 40px;
   width: 40px; }
 
+.details img {
+  float: left;
+  margin: 0 8%; }
+
 .controls {
   overflow: hidden;
   position: absolute;
   width: 100%; }
+
+.details {
+  height: 518px;
+  overflow: hidden;
+  padding: 5% 8% 0 8%; }
 
 .back {
   left: 0;
@@ -1081,10 +1059,10 @@ header p {
 
 .close-details {
   cursor: pointer;
+  stroke: #fff;
   position: absolute;
   right: 2%;
   top: 2%;
-  stroke: #fff;
   width: 40px; }
 
 .foward {

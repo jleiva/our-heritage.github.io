@@ -3,7 +3,6 @@ var char_id = 0;
 var index = 0;
 var position = 0;
 var galleryData = '';
-var charactersData = '';
 var size_item = '';
 var title = '';
 var cont = 0;
@@ -25,7 +24,6 @@ var char_btn = $('.char_btn');
 var overall_char_container = $('#char_details');
 var details = $('#details');
 var char_containers = $('.tap-info');
-
 
 //smaller viewports ***********************************************************************
 enquire.register('(max-width: 766px)', {
@@ -65,7 +63,6 @@ function init() {
         dataType: 'json',
 
         success: function(data) {
-            char_imgs_container = data.Characters;
             galleryData = data.Gallery;
         },
 
@@ -76,24 +73,21 @@ function init() {
 }
 
 // larger viewports ***********************************************************************
-
 function largerViewports() {
-
   // nav-scroll ///////////////////////////////////////////////////////////////////////////////////
-
   $('.game-nav a').click(function(){  
     $('html, body').stop().animate({
       scrollTop: $( $(this).attr('href') ).offset().top - -10
     }, 800);
     return false;
   });
-    //CHARACTERS ***********************************************************************
+
+//CHARACTERS ***********************************************************************
     char_btn.on("click", function() {
         chosen = $(this).attr('value');
 
         for(var i = 0; i < char_containers.length; i++){
             current_char = char_containers[i].id;
-
             if (chosen == current_char) {
                 position = i;
                 detailsGenerator(i);
@@ -137,10 +131,9 @@ function largerViewports() {
         }
     }
 
-    //GALLERY ***********************************************************************
+//GALLERY ***********************************************************************
     galleryBtn.on("click", function() {
         var number = this.id;
-        
         for (var i = 0; i < galleryData.length; i++) {
             if (number == galleryData[i].number) {
               $('#full-picture').attr("src", galleryData[i].img);
@@ -171,13 +164,9 @@ function largerViewports() {
     });
 }
 
-
 // smaller Viewports ***********************************************************************
-
 function smallerViewports() {
-
 // Close Tag ///////////////////////////////////////////////////////////////////////////////////
-
   tap_character.on("click", function() {
     if ($(this).parent(".tap-banner").next().hasClass( "expand-tap-info" )) {
       $(this).parent(".tap-banner").next().removeClass('expand-tap-info');
@@ -192,7 +181,6 @@ function smallerViewports() {
   });
 
 // Lang ///////////////////////////////////////////////////////////////////////////////////
-
   list_lang.on("click", function() {
     for (var i = 0; i < list_lang_item.length; i++) {
       list_lang_item.addClass(function( i ) {
@@ -211,7 +199,6 @@ function smallerViewports() {
   });
 
 // Gallery /////////////////////////////////////////////////////////////////////////////////
-
 size_item=item.length-1;
 title = "1/"+item.length;
   content_swipe.on("swiperight",function(){
@@ -245,5 +232,4 @@ title = "1/"+item.length;
     $(".title").text(title); 
   });
   counter.append('<p class="title">'+title+'</p>');
-
 }
