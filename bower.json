@@ -1,0 +1,24 @@
+{
+  "name": "OurHeritage",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jose Leiva <jdleiva@backcountry.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jleiva/our-heritage.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "enquire": "~2.1.2",
+    "jquery": "~2.1.4",
+    "waypoints": "~4.0.0",
+    "jquery-touchswipe": "~1.6.12"
+  }
+}

@@ -5,19 +5,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // Watch for changes and trigger compass
         watch: {
             sass: {
-                files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
+                files: ['sass/**/*.{scss,sass}', 'sass/partials/**/*.{scss,sass}'],
                 tasks: ['sass:dist', 'postcss']
             },
             js: {
-                files: ['js/**/*.js'],
-                tasks: ['uglify:dev']
+                files: ['js/src/**/*.js', 'bower_components/**/*.js'],
+                tasks: ['bower_concat', 'uglify:dev']
             }
         },
 
-        // Compass and scss
         sass: {
             options: {
                 sourceMap: true,
@@ -50,6 +48,12 @@ module.exports = function (grunt) {
             }
         },
 
+        bower_concat: {
+          vendors: {
+            dest: 'js/src/vendors.js'
+          }
+        },
+
         uglify: {
           dev: {
             options: {
@@ -59,8 +63,8 @@ module.exports = function (grunt) {
               beautify: true
             },
             files: {
-              'js/main.min.js': ['js/main.js']
-              // Output: input
+              'js/vendors.min.js': ['js/src/vendors.js'],
+              'js/main.min.js': ['js/src/main.js']
             }
           },
           prod: {
@@ -70,12 +74,12 @@ module.exports = function (grunt) {
               compress: true
             },
             files: {
-              'js/main.min.js': ['js/main.js']
+              'js/main.min.js': ['js/src/main.js']
             }
           }
         }
     });
 
-    grunt.registerTask('default', ['sass:dist', 'watch', 'uglify:dev']);
+    grunt.registerTask('default', ['bower_concat','uglify:dev', 'sass:dist', 'watch']);
     grunt.registerTask('prod', ['sass:prod', 'uglify:prod', 'postcss']);
 };
