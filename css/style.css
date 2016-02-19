@@ -775,7 +775,8 @@ button:focus:active {
       content: '';
       position: absolute;
       transition: -webkit-transform .3s ease;
-      transition: transform .3s ease; }
+      transition: transform .3s ease;
+      transition: transform .3s ease, -webkit-transform .3s ease; }
     .game-nav a:before {
       background: #24C29F;
       bottom: 0;
@@ -910,7 +911,7 @@ header {
   position: absolute;
   width: 100%; }
   header h1 {
-    background: url(../img/logo.png) no-repeat center center;
+    background: url("../img/logo.png") no-repeat center center;
     background-size: contain;
     height: 150px;
     margin: 0 auto;
@@ -932,7 +933,8 @@ header {
   height: 268px;
   margin: 0 auto;
   text-align: center;
-  max-width: 337px; }
+  max-width: 337px;
+  position: relative; }
   .play-btn-wrapper img {
     text-align: center;
     position: relative;
@@ -940,8 +942,11 @@ header {
     height: auto;
     box-shadow: 0 29px 54px 0px #807C50; }
   .play-btn-wrapper button {
+    left: 0;
+    margin-left: 38%;
+    margin-top: 22%;
     position: absolute;
-    margin: -140px 0 0 -40px; }
+    top: 0; }
   .play-btn-wrapper span {
     font-size: 40px;
     font-size: 4rem;
@@ -1015,7 +1020,7 @@ header {
     vertical-align: middle; }
 
 .download-section:before {
-  background: url(../img/bg/paper-frame.png) center bottom;
+  background: url("../img/bg/paper-frame.png") center bottom;
   content: "";
   height: 23px;
   margin-top: -72px;
@@ -1040,7 +1045,7 @@ header {
       width: 52%; }
       .about-image.right, .about-image.left {
         -webkit-backface-visibility: hidden;
-        background: url(../img/bg/polaroid.jpg);
+        background: url("../img/bg/polaroid.jpg");
         padding: 10px 10px 40px;
         z-index: 0; }
       .about-image.right {
@@ -1320,7 +1325,7 @@ header {
   .char-name h2 {
     font-size: 20px;
     font-size: 2rem;
-    background: url(../img/bg/tape-shape.png) no-repeat center center;
+    background: url("../img/bg/tape-shape.png") no-repeat center center;
     background-size: contain;
     font-family: "Finger Paint", serif;
     transition: all .3s ease;
@@ -1352,16 +1357,15 @@ header {
   padding-top: 15px;
   text-align: center;
   width: 100%; }
-  .counter-slider p {
-    font-size: 20px;
-    font-size: 2rem; }
   @media (min-width: 768px) {
     .counter-slider {
       display: none; } }
+  .counter-slider p {
+    font-size: 20px;
+    font-size: 2rem; }
 
 .gallery-container {
   font-size: 0;
-  /* Hack that removes white space */
   width: 100%; }
   @media (min-width: 1280px) {
     .gallery-container {
@@ -1624,6 +1628,16 @@ header {
   overflow: hidden;
   padding: 0 10%;
   width: 100%; }
+  @media (min-width: 1024px) {
+    .team-details {
+      height: 1024px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 50%; }
+      .team-details h2 {
+        font-size: 60px;
+        font-size: 6rem; } }
   .team-details h2 {
     font-size: 30px;
     font-size: 3rem;
@@ -1640,27 +1654,24 @@ header {
     @media (min-width: 1024px) {
       .team-details .team-logo {
         margin: 450px auto; } }
-  @media (min-width: 1024px) {
-    .team-details {
-      height: 1024px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 50%; }
-      .team-details h2 {
-        font-size: 60px;
-        font-size: 6rem; } }
 
 .team-credits {
   float: left;
   height: 100%;
   padding: 4%;
   width: 100%; }
+  @media (min-width: 1024px) {
+    .team-credits {
+      height: 1024px;
+      overflow: auto;
+      padding: 4% 4% 4% 54%;
+      width: 102%; } }
   .team-credits a {
     font-size: 14px;
     font-size: 1.4rem;
     text-decoration: underline; }
-  .team-credits h3, .team-credits h4 {
+  .team-credits h3,
+  .team-credits h4 {
     padding-bottom: 16px; }
   .team-credits h4 {
     font-size: 24px;
@@ -1673,12 +1684,6 @@ header {
     padding-bottom: 10px; }
   .team-credits ul {
     margin: 0; }
-  @media (min-width: 1024px) {
-    .team-credits {
-      height: 1024px;
-      overflow: auto;
-      padding: 4% 4% 4% 54%;
-      width: 102%; } }
 
 .team-cetav {
   background-color: #fff; }
@@ -1686,6 +1691,9 @@ header {
     background: #b7b9bb; }
   .team-cetav .team-credits a:hover {
     color: #9D9FA2; }
+
+.team-cetav .team-details {
+  background: #f2f2f2; }
 
 .team-fair {
   background-color: #fff; }
@@ -1709,16 +1717,16 @@ footer {
   color: #fff;
   height: 400px;
   overflow: hidden;
-  background: url(../img/bg/footer-mobile.png) center bottom repeat-x; }
+  background: url("../img/bg/footer-mobile.png") center bottom repeat-x; }
+  @media (min-width: 1100px) {
+    footer {
+      height: 700px;
+      background: url("../img/bg/footer.png") center bottom repeat-x; } }
   footer a {
     border-bottom: 2px solid #F2CD77;
     color: #fff; }
   footer:hover {
     border-color: #fff; }
-  @media (min-width: 1100px) {
-    footer {
-      height: 700px;
-      background: url(../img/bg/footer.png) center bottom repeat-x; } }
 
 footer p {
   font-size: 16px;

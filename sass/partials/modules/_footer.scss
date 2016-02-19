@@ -1,58 +1,61 @@
 footer {
-	clear: both;
-	color: #fff;
-	height: 400px;
-	overflow: hidden;
-	background: url(../img/bg/footer-mobile.png) center bottom repeat-x;
-	a {
-		border-bottom: 2px solid #F2CD77;
-		color: #fff;
-	}
-	&:hover {
-		border-color: #fff;
-	}
-	@media (min-width: 1100px){
-		height: 700px;
-		background: url(../img/bg/footer.png) center bottom repeat-x;
-	}
+    clear: both;
+    color: #fff;
+    height: 400px;
+    overflow: hidden;
+    background: url("../img/bg/footer-mobile.png") center bottom repeat-x;
+
+    @media (min-width: 1100px) {
+        height: 700px;
+        background: url("../img/bg/footer.png") center bottom repeat-x;
+    }
+    
+    a {
+        border-bottom: 2px solid #F2CD77;
+        color: #fff;
+    }
+    &:hover {
+        border-color: #fff;
+    }
 }
 
 footer p  {
-	@include font-size(16);
-	font-family: $text-sans;
-	margin: 0;
+    @include font-size(16);
+    font-family: $text-sans;
+    margin: 0;
 
-	@media (min-width: 768px){
-		@include font-size(20);
-	}
+    @media (min-width: 768px) {
+        @include font-size(20);
+    }
 }
 
 .footer-home {
-	background-color: #A5BBD1;
+    background-color: #A5BBD1;
 }
 
 .footer-content {
-	margin: 200px auto;
-	max-width: 650px;
-	padding: 0 30px 0;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
-	text-align: center;
-	@media (min-width: 1100px){
-		margin: 400px auto;
-	}
+    margin: 200px auto;
+    max-width: 650px;
+    padding: 0 30px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .8);
+    text-align: center;
+
+    @media (min-width: 1100px) {
+        margin: 400px auto;
+    }
 }
 
 .footer-game-bg {
-	clear: both;
-	height: 400px;
-	width: 100%;
-	background: #A5BBD1;
+    clear: both;
+    height: 400px;
+    width: 100%;
+    background: #A5BBD1;
 
-	@media (min-width: 768px){
-    background: linear-gradient(rgba(165,187,209,0) 0%, rgba(165,187,209,0.32) 13%, rgba(165,187,209,0.6) 24%, rgba(165,187,209,0.82) 33%, rgba(165,187,209,1) 42%, rgba(165,187,209,1) 99%);
-	}
+    @media (min-width: 768px) {
+        background: linear-gradient(rgba(165,187,209,0) 0%, rgba(165,187,209,0.32) 13%, rgba(165,187,209,0.6) 24%, rgba(165,187,209,0.82) 33%, rgba(165,187,209,1) 42%, rgba(165,187,209,1) 99%);
+    }
 
-  @media (min-width: 1100px){
-    height: 700px;
-  }
+    @media (min-width: 1100px) {
+        height: 700px;
+    }
 }

@@ -1,165 +1,165 @@
 .counter-slider {
-	color: #fff;
-	background: rgb(36, 194, 159);
-	padding-top: 15px;
-	text-align: center;
-	width: 100%;
+    color: #fff;
+    background: rgb(36, 194, 159);
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
 
-	p {
-		@include font-size(20);
-	}
+    @media (min-width: 768px) {
+        display: none;
+    }
 
-	@media (min-width: 768px) {
-		display: none;
-	}
+    p {
+        @include font-size(20);
+    }
 }
 
 .gallery-container {
-	font-size: 0; /* Hack that removes white space */
-	width: 100%;
+    font-size: 0; // Hack that removes white space
+    width: 100%;
 
-	@media (min-width: 1280px) {
-		list-style: none;
-		margin: 0 auto;
-		width: 80%;
-	}
+    @media (min-width: 1280px) {
+        list-style: none;
+        margin: 0 auto;
+        width: 80%;
+    }
 }
 
 .gallery-imgs {
-	width: 100%;
+    width: 100%;
 
-	@media (min-width: 768px) {
-		list-style: none;
-		text-align: center;
-	}
+    @media (min-width: 768px) {
+        list-style: none;
+        text-align: center;
+    }
 }
 
 .section-gallery h2 {
-	@media (min-width: 768px) {
-		display: none;
-	}
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .section-gallery img {
-	@media only screen and (max-width: 768px) {
-		height: auto;
-		max-width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        height: auto;
+        max-width: 100%;
+    }
 }
 
 .section-gallery {
-	width: 100%;
+    width: 100%;
 
-	@media (min-width: 768px) {
-		padding: 60px 30px;
-	}
+    @media (min-width: 768px) {
+        padding: 60px 30px;
+    }
 
-	@media (min-width: 1280px) {
-		padding: 60px;
-	}
+    @media (min-width: 1280px) {
+        padding: 60px;
+    }
 }
 
 .slider-content {
-	@media only screen and (max-width: 768px) {
-		display: none;
-		width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        display: none;
+        width: 100%;
+    }
 }
 
 .slider-image {
-	@media only screen and (max-width: 768px) {
-		height: 610px;
-		width: 100%;
-	}
+    @media only screen and (max-width: 768px) {
+        height: 610px;
+        width: 100%;
+    }
 }
 
 .first-pic {
-	@media only screen and (max-width: 768px) {
-		display: block;
-	}
+    @media only screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 @media (min-width: 768px) {
-	.gallery-imgs li {
-		-webkit-backface-visibility: hidden;
-		background: url(../img/bg/polaroid.jpg);
-		box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
-		cursor: pointer;
-		display: inline-block;
-		padding: 10px 10px 40px;
-		transition: all .3s ease;
-		vertical-align: top;
-		width: 33%;
+    .gallery-imgs li {
+        -webkit-backface-visibility: hidden;
+        background: url(../img/bg/polaroid.jpg);
+        box-shadow: 0 5px 4px 0 rgba(0, 0, 0, .4);
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 10px 40px;
+        transition: all .3s ease;
+        vertical-align: top;
+        width: 33%;
 
-		&:hover {
-			transform: rotate(0deg);
-		}
+        &:hover {
+            transform: rotate(0deg);
+        }
 
-		@media (max-width: 1024px) {
-			padding: 5px 5px 25px;
-		}
-	}
+        @media (max-width: 1024px) {
+            padding: 5px 5px 25px;
+        }
+    }
 
-	.gallery-imgs li img {
-		height: auto;
-		max-width: 100%;
-	}
+    .gallery-imgs li img {
+        height: auto;
+        max-width: 100%;
+    }
 
-	// Scattered Pictures Style
-	.gallery-imgs .pic-1 {
-		transform: rotate(-10deg);
-	}
+    // Scattered Pictures Style
+    .gallery-imgs .pic-1 {
+        transform: rotate(-10deg);
+    }
 
-	.gallery-imgs .pic-2 {
-		transform: rotate(10deg);
-		margin-top: 20px;
-	}
+    .gallery-imgs .pic-2 {
+        transform: rotate(10deg);
+        margin-top: 20px;
+    }
 
-	.gallery-imgs .pic-3 {
-		left: 5px;
-		margin-top: -25px;
-		position: relative;
-		transform: rotate(-10deg);
-	}
+    .gallery-imgs .pic-3 {
+        left: 5px;
+        margin-top: -25px;
+        position: relative;
+        transform: rotate(-10deg);
+    }
 
-	.gallery-imgs .pic-4 {
-		margin-top: -10px;
-		transform: rotate(-15deg);
-	}
+    .gallery-imgs .pic-4 {
+        margin-top: -10px;
+        transform: rotate(-15deg);
+    }
 
-	.gallery-imgs .pic-5 {
-		right: 15px;
-		position: relative;
-		transform: rotate(-8deg);
-	}
+    .gallery-imgs .pic-5 {
+        right: 15px;
+        position: relative;
+        transform: rotate(-8deg);
+    }
 
-	.gallery-imgs .pic-6 {
-		left: 5px;
-		margin-top: -22px;
-		position: relative;
-		transform: rotate(10deg);
-	}
+    .gallery-imgs .pic-6 {
+        left: 5px;
+        margin-top: -22px;
+        position: relative;
+        transform: rotate(10deg);
+    }
 
-	.gallery-imgs .pic-7 {
-		margin-top: -40px;
-		transform: rotate(10deg);
-	}
+    .gallery-imgs .pic-7 {
+        margin-top: -40px;
+        transform: rotate(10deg);
+    }
 
-	.gallery-imgs .pic-8 {
-		margin-top: 25px;
-		transform: rotate(-10deg);
-	}
+    .gallery-imgs .pic-8 {
+        margin-top: 25px;
+        transform: rotate(-10deg);
+    }
 
-	.gallery-imgs .pic-9 {
-		margin-top: -60px;
-		transform: rotate(15deg);
-	}
+    .gallery-imgs .pic-9 {
+        margin-top: -60px;
+        transform: rotate(15deg);
+    }
 
-	.full-picture {
-		height: 100%;
-		max-width: 80%;
-		text-align: center;
-	}
+    .full-picture {
+        height: 100%;
+        max-width: 80%;
+        text-align: center;
+    }
 }
 
 .gallery-type {
@@ -170,57 +170,56 @@
     width: 100%;
 
     &:before,
-	&:after {
-		left: 0;
-	}
+    &:after {
+        left: 0;
+    }
 
     &:after {
-		bottom: -6px;
-	}
+        bottom: -6px;
+    }
 
-	span {
-		@include font-size(20);
-		color: $dark-color;
-		cursor: pointer;
-		display: inline-block;
-		font-family: $hand-serif;
-		margin: 4px 28px;
-	}
+    span {
+        @include font-size(20);
+        color: $dark-color;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $hand-serif;
+        margin: 4px 28px;
+    }
 
-	span:hover {
-		text-shadow: 1px 1px 4px #A7A1A1;
-		border-bottom: 1px solid #000;
-	}
+    span:hover {
+        text-shadow: 1px 1px 4px #A7A1A1;
+        border-bottom: 1px solid #000;
+    }
 
-	.gallery-selected {
-		border-bottom: 1px solid #000;
-	}
+    .gallery-selected {
+        border-bottom: 1px solid #000;
+    }
 
-	@media (min-width: 768px) {
-        
+    @media (min-width: 768px) {
         transform: rotate(-2deg);
         width: 440px;
 
-	    &:before,
-	    &:after {
+        &:before,
+        &:after {
             content: "";
             background: url(../img/bg/tape-shape.png);
             background-size: cover;
             height: 31px;
             position: absolute;
             width: 78px;
-	    }
+        }
 
-	    &:before {
+        &:before {
             left: -27px;
             top: 9px;
-		    transform: rotate(-38deg);
-	    }
+            transform: rotate(-38deg);
+        }
 
-	    &:after {
-		    bottom: 0;
-		    left: 386px;
-		    transform: rotate(-30deg);
-	    }
-	}
+        &:after {
+            bottom: 0;
+            left: 386px;
+            transform: rotate(-30deg);
+        }
+    }
 }

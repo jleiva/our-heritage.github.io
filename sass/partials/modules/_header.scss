@@ -1,65 +1,69 @@
 header {
-	position: absolute;
-	width: 100%;
+    position: absolute;
+    width: 100%;
 
-	h1 {
-		background: url(../img/logo.png) no-repeat center center;
-		background-size: contain;
-		height: 150px;
-		margin: 0 auto;
-		text-indent: -9999px;
-		width: 80%;
+    h1 {
+        background: url("../img/logo.png") no-repeat center center;
+        background-size: contain;
+        height: 150px;
+        margin: 0 auto;
+        text-indent: -9999px;
+        width: 80%;
 
-		@media screen and (min-width: 766px) {
-			display: none;
-		}
+        @media screen and (min-width: 766px) {
+            display: none;
+        }
 
-		@media (min-width: 1366px) {
-			display: block;
-			left: 36%;
-			max-width: 544px;
-			position: absolute;
-			top: 15px;
-		}
-	}
+        @media (min-width: 1366px) {
+            display: block;
+            left: 36%;
+            max-width: 544px;
+            position: absolute;
+            top: 15px;
+        }
+    }
 }
 
 .play-btn-wrapper {
-  cursor: pointer;
-  height: 268px;
-	margin: 0 auto;
-	text-align: center;
-	max-width: 337px;
+    cursor: pointer;
+    height: 268px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 337px;
+    position: relative;
 
-	img {
-		text-align: center;
-		position: relative;
-		width: 100%;
-		height: auto;
-		box-shadow:  0 29px 54px 0px #807C50;
-	}
+    img {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow:  0 29px 54px 0px #807C50;
+    }
 
-	button {
-		position: absolute;
-    margin: -140px 0 0 -40px ;
-	}
+    button {
+        left: 0;
+        margin-left: 38%;
+        margin-top: 22%;
+        position: absolute;
+        top: 0;
+    }
 
-	span {
-		@include font-size(40);
-		color: $light-color;
-		font-family: $text-serif;
-		display: block;
-    margin: 0 110px;
-    position: absolute;
-	}
+    span {
+        @include font-size(40);
+        color: $light-color;
+        font-family: $text-serif;
+        display: block;
+        margin: 0 110px;
+        position: absolute;
+    }
 
-	&:hover{
-		img {
-			box-shadow: 0 29px 54px 0px #585636;
-		}
+    &:hover{
+        img {
+            box-shadow: 0 29px 54px 0px #585636;
+        }
     
-		.play-arrow{
-			background-color: rgba(0, 0, 0, .4);
-		}
-	}
+        .play-arrow{
+            background-color: rgba(0, 0, 0, .4);
+        }
+    }
 }

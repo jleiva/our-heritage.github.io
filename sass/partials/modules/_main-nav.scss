@@ -1,69 +1,69 @@
 .logo-mobile {
-	@media (min-width: 768px) {
-		display: none;
-	}
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .logo-nav {
-	display: none;
+    display: none;
 
-	@media (min-width: 768px) {
-		display: inline-block;
-		float: left;
-	}
+    @media (min-width: 768px) {
+        display: inline-block;
+        float: left;
+    }
 
-	img {
-		margin-top: -13px;
-		width: 100%;
-	}
+    img {
+        margin-top: -13px;
+        width: 100%;
+    }
 }
 
 .logo img {
-	display: block;
-	margin: 4% auto;
-	max-height: 157px;
-	max-width: 664px;
-	width: 100%;
+    display: block;
+    margin: 4% auto;
+    max-height: 157px;
+    max-width: 664px;
+    width: 100%;
 
-	@media (min-width: 1024px) {
-		margin: 4% auto;
-	}
+    @media (min-width: 1024px) {
+        margin: 4% auto;
+    }
 }
 
 .main-nav li {
-	@include font-size(18);
-	display: inline-block;
-	margin-left: 10px;
-	transition: all .35s ease;
+    @include font-size(18);
+    display: inline-block;
+    margin-left: 10px;
+    transition: all .35s ease;
 
-	@media (min-width: 768px) {
-		@include font-size(20);
-		margin-left: 20px;
-	}
+    @media (min-width: 768px) {
+        @include font-size(20);
+        margin-left: 20px;
+    }
 
-	a {
-		color: $light-color;
-		display: inline-block;
-		font-family: $text-serif;
-		padding: 5px;
-		text-decoration: none;
-		text-transform: uppercase;
+    a {
+        color: $light-color;
+        display: inline-block;
+        font-family: $text-serif;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
 
-		@media (min-width: 768px) {
-			padding: 10px;
-		}
-	}
+        @media (min-width: 768px) {
+            padding: 10px;
+        }
+    }
 
-	&:hover {
-		background: $main-color;
-	}
+    &:hover {
+        background: $main-color;
+    }
 }
 
 .main-nav {
-	display: block;
-	margin: 4% 0;
+    display: block;
+    margin: 4% 0;
 
-	@media (min-width: 768px) {
-		margin: 4%;
-	}
+    @media (min-width: 768px) {
+        margin: 4%;
+    }
 }

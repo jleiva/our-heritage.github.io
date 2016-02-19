@@ -1,102 +1,102 @@
 .content-lang {
-	margin-top: 4%;
-	position: absolute;
-	right: 50px;
+    margin-top: 4%;
+    position: absolute;
+    right: 50px;
 
-	@media(min-width: 768px){
-		float: right;
-		margin: 3% 1% 0 0;
-		position: inherit;
-	}
+    @media(min-width: 768px){
+        float: right;
+        margin: 3% 1% 0 0;
+        position: inherit;
+    }
 }
 
 .lang-select {
-	float: right;
-	margin: 2% 3%;
+    float: right;
+    margin: 2% 3%;
 }
 
 .lang-select li {
-	display: inline-block;
+    display: inline-block;
 }
 
 .list-lang {
-	list-style: none;
-	position: absolute;
-	z-index: 1;
+    list-style: none;
+    position: absolute;
+    z-index: 1;
 
-	@media(min-width: 768px) {
-		position: static;
-	}
+    @media(min-width: 768px) {
+        position: static;
+    }
 }
 
 .list-lang-item {
-	-webkit-backface-visibility: hidden;
-	background: rgba(0, 0, 0, .6);
-	border: 2px solid $main-color;
-	cursor: pointer;
-	left: 0;
-  margin-right: 4px;
-	position: absolute;
-	text-align: center;
-	top: -11px;
-	transition: all .35s ease;
+    -webkit-backface-visibility: hidden;
+    background: rgba(0, 0, 0, .6);
+    border: 2px solid $main-color;
+    cursor: pointer;
+    left: 0;
+    margin-right: 4px;
+    position: absolute;
+    text-align: center;
+    top: -11px;
+    transition: all .35s ease;
 
-	@media(min-width: 768px){
-    background: none;
-    border: none;
-		display:inline-block;
-		position: static;
-	}
+    @media(min-width: 768px){
+        background: none;
+        border: none;
+        display:inline-block;
+        position: static;
+    }
 
-	&.selected {
-		background: $main-color;
-		z-index: 3;
-	}
+    &.selected {
+        background: $main-color;
+        z-index: 3;
+    }
 
-	&:hover {
-		background: $main-color;
-	}
+    &:hover {
+        background: $main-color;
+    }
 }
 
 .list-lang-item a {
-	@include font-size(18);
-	color: $light-color;
-  display: inline-block;
-	font-family: $text-serif;
-  padding: 8px;
-	text-decoration: none;
-	text-transform: uppercase;
+    @include font-size(18);
+    color: $light-color;
+    display: inline-block;
+    font-family: $text-serif;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .list-lang li:first-child + li {
-	transform: rotate(10deg);
+    transform: rotate(10deg);
 
-	@media(min-width: 768px) {
-		transform: rotate(0deg);
-	}
+    @media(min-width: 768px) {
+        transform: rotate(0deg);
+    }
 }
 
 .list-lang li:last-child {
-	transform: rotate(10deg);
+    transform: rotate(10deg);
 
-	@media(min-width: 768px) {
-		transform: rotate(0deg);
-	}
+    @media(min-width: 768px) {
+        transform: rotate(0deg);
+    }
 }
 
 
 .lang-item-position-0 {
-	top: 42px;
+    top: 42px;
 }
 
 .lang-item-position-1 {
-	top: 96px;
+    top: 96px;
 }
 
 .lang-item-position-2 {
-	top: 150px;
+    top: 150px;
 }
 
 .lang-item-position-3 {
-	top: 205px;
+    top: 205px;
 }

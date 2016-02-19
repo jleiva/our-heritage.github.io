@@ -1,92 +1,93 @@
 .show-menu {
-	@include font-size(18);
-	background: none;
-	border: 1px solid $light-color;
-	color: $light-color;
-	font-family: $text-serif;
-	margin: 20px 0;
-	padding: 10px 20px;
+    @include font-size(18);
+    background: none;
+    border: 1px solid $light-color;
+    color: $light-color;
+    font-family: $text-serif;
+    margin: 20px 0;
+    padding: 10px 20px;
 
-	@media screen and (min-width: 766px) {
-		display: none;
-	}
+    @media screen and (min-width: 766px) {
+        display: none;
+    }
 }
 
 .team-nav {
-	background-color: $nav-back-color;
-	overflow: hidden;
-	text-align: center;
-	width: 100%;
-	z-index: 3;
+    background-color: $nav-back-color;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
 }
 
 .team-nav-content {
-	background-color: $nav-back-color;
-	background-size: cover;
-	height: 0;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: relative;
-	text-align: center;
-	transition: height .5s linear;
-	width: 100%;
+    background-color: $nav-back-color;
+    background-size: cover;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    transition: height .5s linear;
+    width: 100%;
 
-	@media screen and (min-width: 766px){
-		float: left;
-		height: 75px;
-	}
+    @media screen and (min-width: 766px) {
+        float: left;
+        height: 75px;
+    }
 }
 
 .expanded {
-	height: 204px;
-  @media screen and (min-width: 766px){
-    height: auto;
-  }
+    height: 204px;
+    
+    @media screen and (min-width: 766px) {
+        height: auto;
+    }
 }
 
 .team-nav-item {
-	border-bottom: 1px solid #f2f2f2;
-	padding: 20px 0;
-	width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px 0;
+    width: 100%;
 
-	a {
-		@include font-size(24);
-		font-family: $text-serif;
-		transition: all .3s linear;
+    a {
+        @include font-size(24);
+        font-family: $text-serif;
+        transition: all .3s linear;
 
-		&:hover {
-			color: #f2f2f2;
-		}
+        &:hover {
+            color: #f2f2f2;
+        }
 
-		@media screen and (min-width: 766px) {
-			display: block;
-			height: 50%;
-			padding: 24px 0 52px;
-			width: 100%;
-		}
-	}
+        @media screen and (min-width: 766px) {
+            display: block;
+            height: 50%;
+            padding: 24px 0 52px;
+            width: 100%;
+        }
+    }
 
-	@media screen and (min-width: 766px) {
-		border: none;
-		float: left;
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		width: 33.333%;
-	}
+    @media screen and (min-width: 766px) {
+        border: none;
+        float: left;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 33.333%;
+    }
 }
 
 // Navigation items colors
 .cetav-item {
-	@include nav-items-colors ($cetav-color);
+    @include nav-items-colors ($cetav-color);
 }
 
 .fair-item {
-	@include nav-items-colors ($fair-color);
+    @include nav-items-colors ($fair-color);
 }
 
 .advisors-item {
-	@include nav-items-colors ($advisors-color);
+    @include nav-items-colors ($advisors-color);
 }

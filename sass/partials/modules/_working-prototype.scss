@@ -1,52 +1,52 @@
 .working-prototype-section {
-	margin: 180px 0 50px;
-	padding: 15px 0;
-	width: 100%;
+    margin: 180px 0 50px;
+    padding: 15px 0;
+    width: 100%;
 
-	p {
-		color: $dark-color;
-		line-height: 22px;
-		margin: 0 auto;
-		padding: 16px 0;
-		width: 75%;
+    p {
+        color: $dark-color;
+        line-height: 22px;
+        margin: 0 auto;
+        padding: 16px 0;
+        width: 75%;
 
-		strong {
-			text-shadow: 0 0 0 $dark-color;
-		}
-	}
+        strong {
+            text-shadow: 0 0 0 $dark-color;
+        }
+    }
 
-	@media (min-width: 768px) {
-		margin: 100px auto 0;
-		min-width: 590px;
-		padding: 30px 0;
-		text-align: center;
-		transform: rotate(4deg);
-		width: 65%;
+    @media (min-width: 768px) {
+        margin: 100px auto 0;
+        min-width: 590px;
+        padding: 30px 0;
+        text-align: center;
+        transform: rotate(4deg);
+        width: 65%;
 
-		p {
-			padding-bottom: 16px;
-		}
+        p {
+            padding-bottom: 16px;
+        }
 
-		&:before,
-		&:after {
-      content: url(../img/bg/tape-shape.png);
-			background: none;
-			height: 0;
-			position: absolute;
-			width: 0;
-		}
+        &:before,
+        &:after {
+            content: url(../img/bg/tape-shape.png);
+            background: none;
+            height: 0;
+            position: absolute;
+            width: 0;
+        }
 
-		&:before {
-			left: -30px;
-			margin-top: 0;
-			top: 35px;
-			transform: rotate(-38deg);
-		}
+        &:before {
+            left: -30px;
+            margin-top: 0;
+            top: 35px;
+            transform: rotate(-38deg);
+        }
 
-		&:after {
-			bottom: 15px;
-			right: 83px;
-			transform: rotate(-22deg);
-		}
-	}
+        &:after {
+            bottom: 15px;
+            right: 83px;
+            transform: rotate(-22deg);
+        }
+    }
 }

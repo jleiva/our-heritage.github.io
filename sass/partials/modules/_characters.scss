@@ -137,7 +137,7 @@
 
 	h2 {
 		@include font-size(20);
-		background: url(../img/bg/tape-shape.png) no-repeat center center;
+		background: url("../img/bg/tape-shape.png") no-repeat center center;
 		background-size: contain;
 		font-family: $hand-serif;
 		transition: all .3s ease;
@@ -151,22 +151,22 @@
 	}
 }
 
-.amy{
+.amy {
 	left: 55%;
 	top: 47%;
 }
 
-.mom{
+.mom {
 	left: 22%;
 	top: 32%;
 }
 
-.dad{
+.dad {
 	left: 54%;
 	top: 18%;
 }
 
-.gramps{
+.gramps {
 	left: 73%;
 	top: 38%;
 }

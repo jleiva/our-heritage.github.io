@@ -1,50 +1,51 @@
 .spon-list li {
-	margin-top: 55px;
-	width: 100%;
-	@media (min-width: 1100px) {
-		display: inline-block;
-		width: auto;
-		margin-right: 15px;
-	}
+    margin-top: 55px;
+    width: 100%;
+    
+    @media (min-width: 1100px) {
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+    }
 }
 
 .spon-list {
-	margin: 0 auto;
-	margin-top: 20px;
-	max-width: 90%;
-	overflow: hidden;
-	text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 90%;
+    overflow: hidden;
+    text-align: center;
 
-	@media (min-width: 1024px) {
-		margin: 35px auto;
-	}
+    @media (min-width: 1024px) {
+        margin: 35px auto;
+    }
 
-	.hidden {
-		display: none;
+    .hidden {
+        display: none;
 
-		@media (min-width: 1024px) {
-			display: inline-block;
-		}
-	}
+        @media (min-width: 1024px) {
+            display: inline-block;
+        }
+    }
 }
 
-.spon-list-logoparque{
-
-	@media (max-width: 500px) {
-		width: 100%;
-	}
+.spon-list-logoparque {
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 }
 
 .thanks-section {
-	background-color: #A5BBD1;
-	border-top: 20px solid #374A54;
-	h2{
-		font-size: 4rem;
-	}
-	p {
-		color: #374A54;
-		margin: 0 auto;
-		max-width: 700px;
-		width: 80%;
-	}
+    background-color: #A5BBD1;
+    border-top: 20px solid #374A54;
+
+    h2 {
+        font-size: 4rem;
+    }
+    p {
+        color: #374A54;
+        margin: 0 auto;
+        max-width: 700px;
+        width: 80%;
+    }
 }

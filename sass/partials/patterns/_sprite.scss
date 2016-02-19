@@ -7,7 +7,7 @@
 .download-mac,
 .download-win,
 .up-arrow {
-	background: url('../img/sprite.png') no-repeat;
+	background: url("../img/sprite.png") no-repeat;
 	cursor: pointer;
 }
 
@@ -19,6 +19,7 @@
 	padding: 2px 5px;
 	position: absolute;
 	width: 36px;
+
 	@media(min-width: 768px) {
 		display: none;
 	}

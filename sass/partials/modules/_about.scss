@@ -19,7 +19,7 @@
 		&.right,
 		&.left {
 			-webkit-backface-visibility: hidden;
-			background: url(../img/bg/polaroid.jpg);
+			background: url("../img/bg/polaroid.jpg");
 			padding: 10px 10px 40px;
 			z-index: 0;
 		}

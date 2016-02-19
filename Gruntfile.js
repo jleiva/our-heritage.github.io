@@ -41,7 +41,7 @@ module.exports = function (grunt) {
             options: {
               map: true,
               processors: [
-                require('autoprefixer-core')({browsers: ['last 3 version']})
+                require('autoprefixer')({browsers: ['last 3 version']})
               ]
             },
             dist: {
@@ -96,8 +96,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('prod', [
       'sass:prod', 
-      'concat', 
-      'uglify:prod', 
-      'postcss'
+      'concat',
+      'postcss',
+      'uglify:prod'
       ]);
 };
