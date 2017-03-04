@@ -1,0 +1,14 @@
+.nominations {
+    position: relative;
+    text-align: center;
+
+    img {
+        height: auto;
+        margin-top: -42px;
+        max-width: 250px;
+
+        @media (min-width: 766px) {
+            margin-top: -68px;
+        }
+    }
+}
