@@ -3,15 +3,14 @@
 		var count = 0;
 
 		enquire.register('screen and (min-width: 766px) and (max-width: 1280px)', {
-
-			match : function() {
+			match: function() {
 				if ($('#game-nav').length) {
 					changeGameNavStyle();
 				}
 				$('map').imageMapResize();
 				$('h2.char_btn').addClass('show');
 			},
-			unmatch : function() {
+			unmatch: function() {
 				$('#game-nav').removeClass('nav-sticky');
 				$('h2.char_btn').removeClass('show');
 				Waypoint.destroyAll();
@@ -20,7 +19,6 @@
 		});
 
 		enquire.register('(max-width: 766px)', {
-
 			match: function() {
 				showAboutInfo();
 				gallerySwipe(count);
@@ -34,14 +32,13 @@
 		});
 
 		enquire.register('screen and (min-width: 768px)', {
-
-			match : function() {
+			match: function() {
 				navScrollAnimate();
 				charactersModal(count);
 				showCharacterHover();
 				galleryModal(count);
 			},
-			unmatch : function() {
+			unmatch: function() {
 				$('.gallery-imgs li').off('click');
 			}
 		});
@@ -66,7 +63,7 @@
 		})
 	}
 
-	function showCharacterHover(){
+	function showCharacterHover() {
 		var className;
 		var charClass = $('.char_btn');
 
@@ -125,7 +122,6 @@
 	}
 
 	function controlsModal() {
-
 		$('.close').on('click', function() {
 			displayModal('hide');
 		});
@@ -330,12 +326,38 @@
 	function videoTeaserModal() {
 		var video = $('.teaser'),
 		close = $('.teaser .close'),
-		btn = $('#btn-play-js'),
+		btn = $('.js-btn-play'),
 		player = $('#ytplayer'),
-		content =  '<iframe src="https://www.youtube.com/embed/BeLZicohxl4?autoplay=1&amp;rel=0&amp;controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+		langEsId = 'zy976AEt2-Q',
+		langDeId = 'Dz-5oO17_V4',
+		langEnId = 'xIQjNDnHDW0',
+		langFrId = 'flaN9aKGi34',
+		videoId,
+		content,
+		bodyClass = $('html').attr('class');
 
-		btn.click(function(){
-      player.html(content);
+		switch (bodyClass) {
+		  case 'lang-en':
+		    videoId = langEnId;
+		    break;
+		  case 'lang-fr':
+		    videoId = langFrId;
+		    break;
+		  case 'lang-de':
+		    videoId = langDeId;
+		    break;
+		  case 'lang-es':
+		    videoId = langEsId;
+		    break;
+		  default:
+		    videoId = langEnId;
+		}
+
+		content =  '<iframe src="https://www.youtube.com/embed/'+ videoId +'?autoplay=1&amp;rel=0&amp;controls=1&amp;showinfo=1"  frameborder="0"></iframe>';
+
+		btn.click(function(e) {
+			e.preventDefault;
+      		player.html(content);
 			displayModal('show', video);
 		});
 
@@ -343,5 +365,4 @@
 			player.html('');
 		});
 	}
-
 }());

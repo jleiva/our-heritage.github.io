@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}','sass/partials/**/*.{scss,sass}'],
-                tasks: ['sass:dist', 'postcss']
+                tasks: ['sass:dist']
             },
             js: {
                 files: ['js/src/**/*.js'],
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'css/style.css': 'sass/style.scss'
+                  'css/style.css': 'sass/style.scss'
                 }
             },
             prod: {
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                   outputStyle: 'compressed'
                 },
                 files: {
-                    'css/styles.css': 'sass/styles.scss'
+                  'css/style.css': 'sass/style.scss'
                 }
             }
         },
@@ -41,11 +41,13 @@ module.exports = function (grunt) {
             options: {
               map: true,
               processors: [
-                require('autoprefixer')({browsers: ['last 3 version']})
+                require('autoprefixer')({browsers: ['last 3 version']}),
+                require('postcss-discard-comments')(),
+                require('postcss-clean')(),
               ]
             },
             dist: {
-              src: 'css/*.css'
+              src: 'css-src/*.css'
             }
         },
 
@@ -58,6 +60,28 @@ module.exports = function (grunt) {
             src: ['js/src/jquery-2.1.4.js','js/src/enquire.js', 'js/src/imageMapResizer.min.js', 'js/src/jquery.waypoints.js', 'js/src/jquery.touchSwipe.js'],
             dest: 'js/build/vendors.js',
           },
+        },
+
+        copy: {
+          main: {
+            files: [
+              {expand: true, flatten: true, src: ['css/**'], dest: 'css-src/', filter: 'isFile'},
+            ]
+          }
+        },
+
+        // version assets in css files
+        // folders are kind of dumb, needs refactor
+        h5bp_cachebuster: {
+          options: {
+            algorithm: 'crc32'
+          },
+          css: {
+            expand: true,
+            cwd: 'css-src/',
+            src: '*.css',
+            dest: 'css/'
+          }
         },
 
         uglify: {
@@ -95,9 +119,11 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('prod', [
-      'sass:prod', 
+      'sass:prod',
       'concat',
+      'copy',
       'postcss',
-      'uglify:prod'
-      ]);
+      'uglify:prod',
+      'h5bp_cachebuster'
+    ]);
 };
